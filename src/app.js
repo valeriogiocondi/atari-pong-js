@@ -362,9 +362,7 @@ class Ball {
 		var ball = this;
 
 		// BALL is moving
-
-		// CHECK!!!!
-		if (!game.isPause /*side > areaObj.getLeftLimit() || */ /*&& side >= tab1.getRightSide()*/) {
+		if (!game.isPause) {
 
 			setTimeout(function() {
 
@@ -421,7 +419,7 @@ class Ball {
 		var ball = this;
 
 		// BALL is moving
-		if (!game.isPause /*&& side < tab2.getLeftSide()*/) {
+		if (!game.isPause) {
 
 			setTimeout(function() {
 
@@ -446,6 +444,7 @@ class Ball {
 
 						// yes
 						sound('tab');
+						
 						ball.coeff = ball.getMiddlePoint() - tab2.getMiddlePoint();
 
 						if (ball.coeff > 0)
